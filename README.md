@@ -1,5 +1,5 @@
-// Screenshot
-
 # Countdown Timer
 
-Un contador de tiempo de cuánto hace falta para que finalice el año.
+![](./assets/countdown-timer_.png)
+
+Contador de tiempo de cuánto hace falta para que finalice el año.
