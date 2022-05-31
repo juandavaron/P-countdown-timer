@@ -26,7 +26,7 @@ function countdown() {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const days = Math.floor(totalSeconds / 3600 / 24)
-    const months = Math.round(totalSeconds / 3600 / 24 / daysInAMonth());
+    const months = Math.floor(totalSeconds / 3600 / 24 / daysInAMonth());
 
     const secondsElement = document.getElementById('seconds');
     const minsElement = document.getElementById('mins');
