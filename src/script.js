@@ -1,22 +1,21 @@
 
 function countdown() {
-    function daysInAMonth() {
-        // Month select
-        const currentMonth = currentDate.getMonth();
-        const oddMonth = [0, 2, 4, 6, 7, 9, 11];
-        const evenMonth = [3, 5, 8, 10];
+    // function daysInAMonth() {
+    //     // Month select
+    //     const currentMonth = currentDate.getMonth();
+    //     const oddMonth = [0, 2, 4, 6, 7, 9, 11];
+    //     const evenMonth = [3, 5, 8, 10];
 
-        let totalDays = 0;
-        if (oddMonth.includes(currentMonth)) {
-            totalDays = 31;
-        } else if (evenMonth.includes(currentMonth)) {
-            totalDays = 30;
-        } else {
-            totalDays = 28;
-        };
-
-        return totalDays;
-    }
+    //     let totalDays = 0;
+    //     if (oddMonth.includes(currentMonth)) {
+    //         totalDays = 31;
+    //     } else if (evenMonth.includes(currentMonth)) {
+    //         totalDays = 30;
+    //     } else {
+    //         totalDays = 28;
+    //     };
+    //     return totalDays;
+    // }
 
     const currentDate = new Date();
     const nextYear = new Date(`1 Jan ${currentDate.getFullYear() + 1}`);
@@ -25,8 +24,8 @@ function countdown() {
     const seconds = Math.floor(totalSeconds % 60);
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const hours = Math.floor(totalSeconds / 3600) % 24;
-    const days = Math.floor(totalSeconds / 3600 / 24)
-    const months = Math.floor(totalSeconds / 3600 / 24 / daysInAMonth());
+    const days = Math.floor(totalSeconds / 3600 / 24);
+    const months = Math.floor(totalSeconds / 3600 / 24 / 31);
 
     const secondsElement = document.getElementById('seconds');
     const minsElement = document.getElementById('mins');
