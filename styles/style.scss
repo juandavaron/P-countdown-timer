@@ -1,8 +1,8 @@
-// variables
+// Variables
 // Fonts
 $font-primary: 'Poppins', sans-serif;
 
-// Base reset
+// Base
 * {
     margin: 0;
     padding: 0;
@@ -14,68 +14,121 @@ body {
     background-image: url(../assets/photo-1440864700007-c2a488a09c51.avif);
     background-size: cover;
     background-position: center center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 html {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 // Main Work
 
-main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    padding: 1rem 0;
-    margin-top: -10rem;
-    font-size: 4rem;
-    font-weight: 500;
+.header {
     text-align: center;
+    position: relative;
+    top: 2rem;
 }
 
-.container {
+.main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 
-
-
-    .sub-cont {
-        margin: .5rem 1.5rem;
-        text-align: center;
+    &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .num {
+    &__title {
+        padding: 1rem;
+        font-size: 4rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.countdown {
+    &__section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+    &__container {
+        margin: .5rem 1.5rem;
+        text-align: center;
+    }
+
+    &__number {
         font-size: 3rem;
         font-weight: bold;
         width: 6rem;
         box-shadow: 0px 15px 10px -5px rgba(0, 0, 0, 0.2);
-        background-color: rgba(240, 189, 78, 0.075);
+        transition: .4s;
+        background: rgb(6, 6, 6);
+        background: linear-gradient(0deg, rgba(65, 64, 64, 0.4) 0%,
+                rgba(170, 139, 92, 0.5) 13%,
+                rgba(170, 139, 92, 0.5) 75%,
+                rgba(129, 126, 117, 0.25) 100%);
+
+        &:hover {
+            transform: scale(1.25);
+        }
+
+        &-months {
+            border-radius: 15px 0 0 15px;
+        }
+
+        &-seconds {
+            border-radius: 0 15px 15px 0;
+        }
     }
 
-    .num-months {
-        border-radius: 15px 0 0 15px;
-    }
-
-    .num-seconds {
-        border-radius: 0 15px 15px 0;
-    }
-
-    .text {
+    &__text {
         font-size: 1.4rem;
-        display: inline-block;
-        margin-top: 1.3rem;
+        padding-top: 1.25rem;
     }
+}
+
+// Breakpoints
+
+@media screen and (max-width: 50em) {
+    .header{
+        font-size: .75rem;
+    }
+    
+    .main {
+        &__title {
+            font-size: 3rem;
+        }
+    }
+
+    .countdown {
+        &__section {
+            // padding: .25rem;
+        }
+
+        &__number {
+            font-size: 2rem;
+            width: 5rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+
+        &__container {
+            margin: .5rem .75rem;
+        }
+    }
+
 }

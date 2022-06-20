@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -14,31 +18,44 @@
 </head>
 
 <body>
-    <main>
-        <h1>SOLO UN POCO MÁS...</h1>
-        <section class="container">
-            <div class="sub-cont months">
-                <p class="num num-months" id="months">0</p>
-                <p class="text">Meses</p>
-            </div>
-            <div class="sub-cont days">
-                <p class="num num-days" id="days">0</p>
-                <p class="text">Días</p>
-            </div>
-            <div class="sub-cont hours">
-                <p class="num num-hours" id="hours">0</p>
-                <p class="text">Horas</p>
-            </div>
-            <div class="sub-cont mins">
-                <p class="num num-mins" id="mins">0</p>
-                <p class="text">Minutos</p>
-            </div>
-            <div class="sub-cont seconds">
-                <p class="num num-seconds" id="seconds">0</p>
-                <p class="text">Segundos</p>
-            </div>
-        </section>
+    <header class="header" id="header">
+        <div class="header__container container">
+            <span class="header__copy">
+                Hecho con 🧡 por <a href="https://github.com/juandavaron">Juan Varón</a>
+            </span>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <div class="main__container">
+            <h1 class="main__title">SOLO UN POCO MÁS...</h1>
+            
+            <section class="countdown__section">
+                <div class="countdown__container months">
+                    <p class="countdown__number countdown__number-months" id="months">0</p>
+                    <p class="countdown__text">Meses</p>
+                </div>
+                <div class="countdown__container days">
+                    <p class="countdown__number countdown__number-days" id="days">0</p>
+                    <p class="countdown__text">Días</p>
+                </div>
+                <div class="countdown__container hours">
+                    <p class="countdown__number countdown__number-hours" id="hours">0</p>
+                    <p class="countdown__text">Horas</p>
+                </div>
+                <div class="countdown__container mins">
+                    <p class="countdown__number countdown__number-mins" id="mins">0</p>
+                    <p class="countdown__text">Minutos</p>
+                </div>
+                <div class="countdown__container seconds">
+                    <p class="countdown__number countdown__number-seconds" id="seconds">0</p>
+                    <p class="countdown__text">Segundos</p>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <footer class="footer" id="footer"></footer>
 
     <script src="./src/script.js"></script>
 </body>

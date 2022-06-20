@@ -36,7 +36,7 @@ function countdown() {
     secondsElement.innerHTML = formatTime(seconds);
     minsElement.innerHTML = formatTime(minutes);
     hoursElement.innerHTML = formatTime(hours);
-    daysElement.innerHTML = days;
+    daysElement.innerHTML = formatTime(days);
     monthsElement.innerHTML = formatTime(months);
 
     function formatTime(time) {
