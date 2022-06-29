@@ -105,7 +105,7 @@ a {
     .header{
         font-size: .75rem;
     }
-    
+
     .main {
         &__title {
             font-size: 3rem;
@@ -113,10 +113,6 @@ a {
     }
 
     .countdown {
-        &__section {
-            // padding: .25rem;
-        }
-
         &__number {
             font-size: 2rem;
             width: 5rem;
